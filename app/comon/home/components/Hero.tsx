@@ -5,9 +5,9 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col p-32 text-center gap-y-4">
-      <h1 className="text-5xl">Our timeless bag collections</h1>
-      <p className="text-lg">
+    <section className="flex flex-col p-32 text-center gap-y-8 laptop:p-64 items-center ">
+      <h1 className="text-5xl laptop:w-6/12">Our timeless bag collections</h1>
+      <p className="text-lg laptop:w-4/12 laptop:text-base">
         Designed for the way you live your life. Bagberry are beautiful in their
         simplicity
       </p>
