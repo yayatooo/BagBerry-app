@@ -30,3 +30,18 @@ export const bestSelling = [
         image: "/best/image5.png"
     },
 ]
+
+export const blogHome = [
+    {
+        id : "1",
+        tittle : " Elevate your style with our luxurious handbags",
+        date : "March 1, 2023",
+        image : "/assets/image18.png"
+    },
+    {
+        id : "2",
+        tittle : " Upgrade your handbag collection with our designer styles",
+        date : "Nov 8, 2023",
+        image : "/assets/image19.png"
+    }
+]
