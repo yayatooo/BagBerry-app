@@ -45,3 +45,66 @@ export const blogHome = [
         image : "/assets/image19.png"
     }
 ]
+
+
+export const ourShop = [
+    {
+        id : "1",
+        name : "Terms and Policy",
+        link : "/"
+    },
+    {
+        id : "2",
+        name : "Contact Us",
+        link : "/"
+    },
+    {
+        id : "3",
+        name : "Offers and Promotion",
+        link : "/"
+    },
+    {
+        id : "4",
+        name : "Gift Cards",
+        link : "/"
+    },
+    {
+        id : "5",
+        name : "Store and Opening Hours",
+        link : "/"
+    },
+]
+export const useFullLinks = [
+    {
+        id : "1",
+        name : "Our Brand",
+        link : "/"
+    },
+    {
+        id : "2",
+        name : "Career",
+        link : "/"
+    },
+    {
+        id : "3",
+        name : "About",
+        link : "/"
+    },
+    {
+        id : "4",
+        name : "Campaigns",
+        link : "/"
+    }
+]
+export const location = [
+    {
+        id : "1",
+        name : "312, Awesome Street, Chennai, Tamilnadu, United Kingdom",
+        link : "/"
+    },
+    {
+        id : "2",
+        name : "52, Awesome Street, Chennai, Tamilnadu, United States",
+        link : "/"
+    },
+]

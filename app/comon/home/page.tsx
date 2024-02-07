@@ -4,6 +4,7 @@ import BestSelling from "./components/BestSelling";
 import RouteToProduct from "./components/RouteToProduct";
 import AdsComponents from "./components/AdsComponents";
 import BlogHome from "./components/BlogHome";
+import Partner from "./components/Partner";
 
 const HomeComponent = () => {
   return (
@@ -13,6 +14,7 @@ const HomeComponent = () => {
       <RouteToProduct />
       <AdsComponents />
       <BlogHome />
+      <Partner />
     </section>
   );
 };

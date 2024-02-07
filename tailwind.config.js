@@ -14,6 +14,9 @@ module.exports = {
       laptop: "1024px",
       desktop: "1280px",
     },
+    backgroundImage: {
+      "background-hero": "url('/assets/cover-hero.png')",
+    },
     container: {
       center: true,
       padding: "2rem",

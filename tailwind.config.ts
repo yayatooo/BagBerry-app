@@ -18,9 +18,7 @@ const config: Config = {
         'primary' : '#DF6724'
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'background-hero' : "url('/assets/cover.jpg')"
       },
     },
   },

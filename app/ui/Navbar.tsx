@@ -6,7 +6,7 @@ import { IoIosCart } from "react-icons/io";
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full">
+    <nav className="fixed w-full z-40 text-white">
       <section className="container text-base flex max-w-7xl items-center justify-between py-6">
         <h1 className={newsReader.className}>Bagberry.</h1>
         <ul className="hidden tablet:flex gap-x-3">
@@ -26,8 +26,8 @@ const Navbar = () => {
               <IoSearchSharp className="text-gray-400" aria-hidden />
             </div>
           </div>
-          <RxAvatar className="text-2xl" />
-          <IoIosCart className="text-2xl" />
+          <RxAvatar className="text-2xl text-white" />
+          <IoIosCart className="text-2xl text-white" />
         </div>
       </section>
     </nav>
