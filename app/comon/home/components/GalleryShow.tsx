@@ -10,14 +10,14 @@ export default function GalleryShow() {
           width={500}
           height={500}
           alt="gallery"
-          className=""
+          className="mobile:hidden laptop:flex"
         />
         <Image
           src="/assets/gallery2.png"
           width={400}
           height={400}
           alt="gallery"
-          className="absolute ml-[21rem] top-[90rem]"
+          className="mobile:hidden laptop:flex laptop:absolute laptop:top-[92rem] laptop:ml-72"
         />
       </div>
       <Image
@@ -25,7 +25,7 @@ export default function GalleryShow() {
         width={350}
         height={350}
         alt="gallery"
-        className="float-right"
+        className="mobile:hidden laptop:flex float-right"
       />
     </div>
   );
