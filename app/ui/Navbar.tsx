@@ -27,7 +27,9 @@ const Navbar = () => {
       }`}
     >
       <section className="container text-base flex max-w-7xl items-center justify-between py-6">
-        <h1 className={newsReader.className}>Bagberry.</h1>
+        <div className="text-2xl">
+          <h1 className={newsReader.className}>Bagberry.</h1>
+        </div>
         <ul className="hidden tablet:flex gap-x-3">
           <li>Home</li>
           <li>Shop</li>

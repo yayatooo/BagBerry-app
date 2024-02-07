@@ -21,7 +21,7 @@ export default function BlogHome() {
             Designed by bagbery, with premium, durable and environmentally
             fiendly materials
           </p>
-          <Button className="rounded-full w-[250px] bg-[#DF6724] mx-auto">
+          <Button className="rounded-full w-[250px] bg-[#DF6724] mx-auto hover:bg-[#a34614]">
             Explore Our Blog
           </Button>
         </div>

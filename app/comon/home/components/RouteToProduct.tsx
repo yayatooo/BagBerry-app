@@ -9,7 +9,7 @@ export default function RouteToProduct() {
         <h1 className="text-5xl font-light">
           Complate your dazzling look with our collections
         </h1>
-        <Button className="rounded-full w-[250px] bg-[#DF6724] mx-auto">
+        <Button className="rounded-full w-[250px] bg-[#DF6724] mx-auto hover:bg-[#a34614]">
           Go to Collection
         </Button>
       </div>

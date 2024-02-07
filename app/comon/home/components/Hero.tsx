@@ -11,7 +11,7 @@ export default function Hero() {
         Designed for the way you live your life. Bagberry are beautiful in their
         simplicity
       </p>
-      <Button className="rounded-full w-[250px] bg-[#DF6724] mx-auto">
+      <Button className="rounded-full w-[250px] bg-[#DF6724] mx-auto hover:bg-[#a34614]">
         Go to Shop
       </Button>
     </section>
