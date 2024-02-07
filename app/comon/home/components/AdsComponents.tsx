@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function AdsComponents() {
   return (
     <section className="mt-[30rem] w-full bg-[#DF6724]">
-      <div className="container flex py-20 items-center gap-8">
+      <div className="container flex py-20 gap-8 mobile:flex-col mobile:text-center mobile:items-center laptop:flex-row laptop:items-center">
         <Image
           src="/assets/image17.png"
           width={500}

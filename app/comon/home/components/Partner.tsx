@@ -10,7 +10,7 @@ export default function Partner() {
           "The most beautifully designed handbags ever"
         </h1>
         <div className="w-8/12 h-[2px] bg-[#EBDECD]"></div>
-        <div className="flex w-6/12 justify-between pt-14">
+        <div className="flex laptop:w-6/12 mobile:w-full justify-between pt-14">
           <Image
             src="/partner/partner.png"
             width={120}

@@ -6,7 +6,7 @@ import FooterRight from "./FooterRight";
 export default function Footer() {
   return (
     <>
-      <footer className="container flex justify-between gap-x-16">
+      <footer className="container flex mobile:flex-col laptop:flex-row justify-between gap-x-16">
         <FooterLeft />
         <FooterRight />
       </footer>

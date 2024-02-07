@@ -14,8 +14,8 @@ import { blogHome } from "@/app/utility/data";
 export default function BlogHome() {
   return (
     <section className="container py-12">
-      <div className="flex gap-x-8">
-        <div className="w-[35%] space-y-10">
+      <div className="flex mobile:items-center mobile:gap-y-8 gap-x-8 mobile:overflow-auto mobile:flex-col laptop:flex-row">
+        <div className="w-full text-center laptop:w-[35%] space-y-10">
           <h1 className="text-4xl">See our inside news & editorials</h1>
           <p>
             Designed by bagbery, with premium, durable and environmentally
@@ -26,7 +26,10 @@ export default function BlogHome() {
           </Button>
         </div>
         {blogHome.map((item) => (
-          <Card className="w-3/12 mr-4" key={item.id}>
+          <Card
+            className="w-8/12 laptop:w-3/12 tablet:w-6/12 mr-4"
+            key={item.id}
+          >
             <CardHeader>
               <CardTitle>{item.tittle}</CardTitle>
               <CardDescription>{item.date}</CardDescription>

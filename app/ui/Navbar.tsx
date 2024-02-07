@@ -1,12 +1,31 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { newsReader } from "../constant/font";
 import { IoSearchSharp } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import { IoIosCart } from "react-icons/io";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="fixed w-full z-40 text-white">
+    <nav
+      className={`fixed w-full z-40 text-white transition-colors duration-300  ${
+        scrolled ? "bg-[#DF6724]" : "bg-transparent"
+      }`}
+    >
       <section className="container text-base flex max-w-7xl items-center justify-between py-6">
         <h1 className={newsReader.className}>Bagberry.</h1>
         <ul className="hidden tablet:flex gap-x-3">
