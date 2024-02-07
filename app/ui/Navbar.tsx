@@ -39,7 +39,7 @@ const Navbar = () => {
           <div className="relative">
             <input
               type="search"
-              className="rounded-full border border-gray-500 "
+              className="rounded-full border border-gray-500 bg-black opacity-30"
             />
             <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
               <IoSearchSharp className="text-gray-400" aria-hidden />

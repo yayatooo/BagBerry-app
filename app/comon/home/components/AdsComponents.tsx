@@ -20,7 +20,7 @@ export default function AdsComponents() {
             Sitting comfortably round the waist, it fastens with a buckle clip
             on an adjustable strap
           </p>
-          <Button className="rounded-full bg-white text-[#DF6724]">
+          <Button className="rounded-full bg-white text-[#DF6724] hover:bg-[#aa592e]">
             Go to Collection
           </Button>
         </div>
