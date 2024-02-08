@@ -16,6 +16,8 @@ module.exports = {
     },
     backgroundImage: {
       "background-hero": "url('/assets/cover-hero.png')",
+      "background-shop": "url('/assets/cover-shop.jpg')",
+      "background-product": "url('/assets/cover-product.jpg')",
     },
     container: {
       center: true,
