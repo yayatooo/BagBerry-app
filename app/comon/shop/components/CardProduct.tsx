@@ -3,6 +3,7 @@ import { Card, CardContent, CardTitle, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { CardProductProps } from "@/app/type/CardProductProps";
+import Link from "next/link";
 
 const CardProduct: React.FC<CardProductProps> = ({
   name,
@@ -12,7 +13,7 @@ const CardProduct: React.FC<CardProductProps> = ({
   id,
 }: CardProductProps) => {
   return (
-    <div>
+    <Link href={"/shop/detail"}>
       <Card className="w-[280px]" key={id}>
         <CardContent className="p-0">
           <div className="relative">
@@ -39,7 +40,7 @@ const CardProduct: React.FC<CardProductProps> = ({
           </div>
         </div>
       </Card>
-    </div>
+    </Link>
   );
 };
 
