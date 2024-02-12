@@ -108,3 +108,32 @@ export const location = [
         link : "/"
     },
 ]
+
+export const navLink = [
+    {
+        id: 1,
+        name: "Home",
+        link: "/"
+    },
+    {
+        id: 2,
+        name: "Shop",
+        link: "/shop"
+    },
+    {
+        id: 3,
+        name: "LookBook",
+        link: "/"
+    },
+    {
+        id: 4,
+        name: "Pages",
+        link: "/"
+    },
+    {
+        id: 5,
+        name: "Blog",
+        link: "/"
+    },
+    
+]

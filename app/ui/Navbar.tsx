@@ -4,6 +4,9 @@ import { newsReader } from "../constant/font";
 import { IoSearchSharp } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import { IoIosCart } from "react-icons/io";
+import { navLink } from "../utility/data";
+import Link from "next/link";
+import { NavLinkProps } from "../type/NavLinkProps";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,11 +34,11 @@ const Navbar = () => {
           <h1 className={newsReader.className}>Bagberry.</h1>
         </div>
         <ul className="hidden tablet:flex gap-x-3">
-          <li>Home</li>
-          <li>Shop</li>
-          <li>Lookbook</li>
-          <li>Pages</li>
-          <li>Blog</li>
+          {navLink.map((data: NavLinkProps) => (
+            <Link key={data.id} href={data.link}>
+              {data.name}
+            </Link>
+          ))}
         </ul>
         <div className="flex gap-x-3 text-black">
           <div className="relative">
