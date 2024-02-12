@@ -2,17 +2,8 @@
 import React from "react";
 import CardProduct from "./CardProduct";
 import { useQuery } from "react-query";
-import axios from "axios";
 import { CardProductProps } from "@/app/type/CardProductProps";
-
-const fetchProduct = async () => {
-  const url = process.env.NEXT_PUBLIC_PRODUCT_URL || "";
-  const response = await axios.get(url);
-  if (response.status !== 200) {
-    throw new Error("Could not get products");
-  }
-  return response.data.aaData;
-};
+import fetchProduct from "@/app/service/getProduct";
 
 export default function CardContainer() {
   const { isLoading, error, data } = useQuery({
