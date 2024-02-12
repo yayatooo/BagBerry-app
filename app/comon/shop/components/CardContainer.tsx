@@ -14,7 +14,10 @@ const fetchProduct = async () => {
 };
 
 export default function CardContainer() {
-  const { isLoading, error, data } = useQuery("products", fetchProduct);
+  const { isLoading, error, data } = useQuery({
+    queryFn: () => fetchProduct(),
+    queryKey: ["products"],
+  });
 
   console.log(data);
 
