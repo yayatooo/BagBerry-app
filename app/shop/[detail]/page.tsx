@@ -1,15 +1,9 @@
-import { useRouter } from "next/navigation";
+"use client";
 import { useQuery } from "react-query";
-import getProductById from "@/app/service/getProductById";
+import productId from "@/app/service/productId";
 import DetailProduct from "./components/DetailProduct";
+import { useEffect } from "react";
 
 export default function Page() {
-  // const result = useQuery({
-  //   queryKey: ["product", id],
-  //   queryFn: () => getProductById(id),
-  // });
-
-  // if (!result) return <div>Loading...</div>;
-  // console.log(result);
   return <DetailProduct />;
 }
