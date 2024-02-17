@@ -13,12 +13,18 @@ export default function CardContainer() {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
+
+  // if (data) {
+  //   data.forEach((item: CardProductProps) => {
+  //     console.log(item.id);
+  //   });
+  // }
+
   return (
     <section className="container py-16">
       <div className="flex flex-wrap gap-8 justify-center">
         {data.map((item: CardProductProps) => (
           <CardProduct
-            key={item.id}
             name={item.name}
             photo={item.photo}
             currency={item.currency}

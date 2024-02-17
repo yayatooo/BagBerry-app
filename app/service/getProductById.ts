@@ -1,16 +1,17 @@
-import axios from "axios";
+import axios from 'axios';
 
-const url = process.env.NEXT_PUBLIC_PRODUCT_URL || "";
+const getProductById = async (id: number) => {
+  // Check if id is not undefined and is a valid number
+  if (id === undefined || isNaN(id)) {
+    throw new Error("Invalid product ID");
+  }
 
-const getProductById = async (id : number) => {
-    const response = await axios.get(`${url}/${id}`);
-    if (response.status !== 200) {
-        throw new Error("Could not get products");
-    }
-    
-    return response;
+  const response = await axios.get(`https://sistemtoko.com/public/demo/single/${id}`);
+  if (response.status !== 200) {
+    throw new Error("Could not get product");
+  }
 
-  };
-    
-  
-  export default getProductById
+  return response.data; // Return the entire response data
+};
+
+export default getProductById;

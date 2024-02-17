@@ -13,7 +13,7 @@ const CardProduct: React.FC<CardProductProps> = ({
   id,
 }: CardProductProps) => {
   return (
-    <Link href={"/shop/detail"}>
+    <Link href={`/shop/detail/`}>
       <Card className="w-[280px]" key={id}>
         <CardContent className="p-0">
           <div className="relative">

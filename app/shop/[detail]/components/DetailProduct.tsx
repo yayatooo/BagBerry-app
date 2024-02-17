@@ -14,19 +14,14 @@ interface CardProductIdProps {
 }
 
 const DetailProduct: React.FC<CardProductIdProps> = ({ id }) => {
-  // const { isLoading, error, data } = useQuery(["product", id], () => {
-  //   return id !== undefined
-  //     ? getProductById(id)
-  //     : Promise.reject(new Error("ID is undefined"));
-  // });
-  // if (isLoading) return <div>Loading...</div>;
-  // if (error) return <div>Error</div>;
+  const result = useQuery({
+    queryKey: ["product", id],
+    queryFn: () => getProductById(id),
+  });
 
-  // const productData = data?.data;
-
-  // const { name, photo, currency, price } = productData;
-
-  // console.log(productData);
+  if (!result) return <div>Loading...</div>;
+  const productId = result;
+  console.log(productId);
 
   return (
     <section className="container py-36">
