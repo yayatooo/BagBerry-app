@@ -14,8 +14,6 @@ export default function CardContainer() {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
 
-  console.log(data);
-
   return (
     <section className="container py-16">
       <div className="flex flex-wrap gap-8 justify-center">

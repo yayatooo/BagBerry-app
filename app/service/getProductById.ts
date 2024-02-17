@@ -1,12 +1,9 @@
 import axios from 'axios';
 
-const getProductById = async (id: number) => {
-  // Check if id is not undefined and is a valid number
-  if (id === undefined || isNaN(id)) {
-    throw new Error("Invalid product ID");
-  }
+const getProductById = async (product_id: number) => {
 
-  const response = await axios.get(`https://sistemtoko.com/public/demo/single/${id}`);
+
+  const response = await axios.get(`https://sistemtoko.com/public/demo/single/${product_id}`);
   if (response.status !== 200) {
     throw new Error("Could not get product");
   }

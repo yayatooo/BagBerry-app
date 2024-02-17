@@ -1,31 +1,20 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { useQuery } from "react-query";
-import getProductById from "@/app/service/getProductById";
 
-interface CardProductIdProps {
-  id: number;
-  name: string;
-  photo: string;
-  currency: string;
-  price: string;
-}
+// interface CardProductIdProps {
+//   id: number;
+//   name: string;
+//   photo: string;
+//   currency: string;
+//   price: string;
+// }
 
-const DetailProduct: React.FC<CardProductIdProps> = () => {
-  // const result = useQuery({
-  //   queryKey: ["product", id],
-  //   queryFn: () => getProductById(id),
-  // });
-
-  // if (!result) return <div>Loading...</div>;
-  // console.log(result);
-
+// const DetailProduct: React.FC<CardProductIdProps> = () => {
+const DetailProduct = () => {
   return (
     <section className="container py-36">
       <div className="flex gap-10">
-        <Image src={"/test1.png"} width={400} height={400} alt="product" />
+        <Image src={"/test1.png"} width={450} height={450} alt="product" />
         <div>
           <div className="py-6 space-y-2">
             <h1 className="text-2xl">Name Product</h1>
