@@ -13,15 +13,14 @@ interface CardProductIdProps {
   price: string;
 }
 
-const DetailProduct: React.FC<CardProductIdProps> = ({ id }) => {
-  const result = useQuery({
-    queryKey: ["product", id],
-    queryFn: () => getProductById(id),
-  });
+const DetailProduct: React.FC<CardProductIdProps> = () => {
+  // const result = useQuery({
+  //   queryKey: ["product", id],
+  //   queryFn: () => getProductById(id),
+  // });
 
-  if (!result) return <div>Loading...</div>;
-  const productId = result;
-  console.log(productId);
+  // if (!result) return <div>Loading...</div>;
+  // console.log(result);
 
   return (
     <section className="container py-36">

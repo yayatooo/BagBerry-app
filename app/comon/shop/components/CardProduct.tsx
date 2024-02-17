@@ -6,15 +6,15 @@ import { CardProductProps } from "@/app/type/CardProductProps";
 import Link from "next/link";
 
 const CardProduct: React.FC<CardProductProps> = ({
+  id,
   name,
   photo,
   price,
   currency,
-  id,
 }: CardProductProps) => {
   return (
-    <Link href={`/shop/detail/`}>
-      <Card className="w-[280px]" key={id}>
+    <Link href={`/shop/${id}`}>
+      <Card className="w-[280px]">
         <CardContent className="p-0">
           <div className="relative">
             <h1 className="absolute top-0 left-0 bg-orange-500 text-white p-1 w-[85px] text-center">

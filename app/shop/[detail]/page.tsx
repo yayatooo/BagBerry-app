@@ -7,5 +7,5 @@ export default function Page({
 }: {
   params: { detail: CardProductProps };
 }) {
-  return <DetailProduct detail={params.id} />;
+  return <DetailProduct id={params.detail} />;
 }
