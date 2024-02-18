@@ -8,6 +8,7 @@ const getProductById = async (product_id: number) => {
     throw new Error("Could not get product");
   }
 
+
   return response.data; // Return the entire response data
 };
 

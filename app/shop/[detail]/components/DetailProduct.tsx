@@ -1,24 +1,32 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-// interface CardProductIdProps {
-//   id: number;
-//   name: string;
-//   photo: string;
-//   currency: string;
-//   price: string;
-// }
+type CardProductIdProps = {
+  product_id: number;
+  product_name: string;
+  product_img: string;
+  product_buy_price: string;
+};
+
+interface DetailProductProps {
+  product: CardProductIdProps;
+}
 
 // const DetailProduct: React.FC<CardProductIdProps> = () => {
-const DetailProduct = () => {
+const DetailProduct = ({ product }: DetailProductProps) => {
   return (
     <section className="container py-36">
       <div className="flex gap-10">
-        <Image src={"/test1.png"} width={450} height={450} alt="product" />
+        <Image
+          src={`https://sistemtoko.com/img/user/demo/product/${product.product_img}`}
+          width={450}
+          height={450}
+          alt="product"
+        />
         <div>
           <div className="py-6 space-y-2">
-            <h1 className="text-2xl">Name Product</h1>
-            <h1 className="text-4xl">Rp. 100.000</h1>
+            <h1 className="text-2xl">{product.product_name}</h1>
+            <h1 className="text-4xl">Rp. {product.product_buy_price}</h1>
             <h1>Stock : 20</h1>
           </div>
           <div className="w-full h-[2px] mb-6 bg-[#EBDECD]"></div>
