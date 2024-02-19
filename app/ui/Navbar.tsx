@@ -35,7 +35,9 @@ const Navbar = () => {
       >
         <section className="container text-base flex max-w-7xl items-center justify-between py-6">
           <div className="text-2xl">
-            <h1 className={newsReader.className}>Bagberry.</h1>
+            <Link href="/" className={newsReader.className}>
+              Bagberry.
+            </Link>
           </div>
           <ul className="hidden tablet:flex gap-x-3">
             {navLink.map((data: NavLinkProps) => (
