@@ -8,6 +8,7 @@ import { navLink } from "../utility/data";
 import Link from "next/link";
 import { NavLinkProps } from "../type/NavLinkProps";
 import CartSideBar from "./CartSideBar";
+import Search from "./Search";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -47,15 +48,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex gap-x-3 text-black">
-            <div className="relative">
-              <input
-                type="search"
-                className="rounded-full border border-gray-500 bg-black opacity-30"
-              />
-              <div className="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none">
-                <IoSearchSharp className="text-gray-400" aria-hidden />
-              </div>
-            </div>
+            <Search />
             <RxAvatar className="text-2xl text-white" />
             <button onClick={() => setOpened(true)}>
               <IoIosCart className="text-2xl text-white" />
