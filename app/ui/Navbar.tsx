@@ -8,7 +8,7 @@ import { navLink } from "../utility/data";
 import Link from "next/link";
 import { NavLinkProps } from "../type/NavLinkProps";
 import CartSideBar from "./CartSideBar";
-import Search from "./Search";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,7 +48,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex gap-x-3 text-black">
-            <Search />
+            <SearchBar />
             <RxAvatar className="text-2xl text-white" />
             <button onClick={() => setOpened(true)}>
               <IoIosCart className="text-2xl text-white" />
