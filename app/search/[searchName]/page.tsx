@@ -2,16 +2,11 @@
 import React from "react";
 import searchParam from "@/app/service/searchParam";
 import { useQuery } from "react-query";
-import SearchProduct from "./components/SearchProduct";
-import { CardProductProps } from "@/app/type/CardProductProps";
 import Loading from "@/app/ui/Loading";
-
-interface DataSearchProps {
-  aaData: CardProductProps[];
-}
+import SearchProduct from "./components/SearchProduct";
 
 export default function Page({ params }: { params: { searchName: string } }) {
-  const { data, isLoading } = useQuery<DataSearchProps>(
+  const { data, isLoading } = useQuery(
     ["search", params.searchName],
     () => searchParam(params.searchName),
     {
@@ -30,7 +25,7 @@ export default function Page({ params }: { params: { searchName: string } }) {
     return (
       <section className="container py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.aaData.map((item: CardProductProps) => (
+          {data.map((item: any) => (
             <SearchProduct
               key={item.id}
               id={item.id}
@@ -45,9 +40,4 @@ export default function Page({ params }: { params: { searchName: string } }) {
       </section>
     );
   }
-  //   return (
-  //     <div>
-  //       <p>{data.toString()}</p>
-  //     </div>
-  //   );
 }
