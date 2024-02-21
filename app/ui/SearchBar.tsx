@@ -24,7 +24,7 @@ const SearchBar = () => {
     router.push(`/search/${searchQueryParams}`);
   };
 
-  console.log(searchResult);
+  // console.log(searchResult);
 
   return (
     <div className="relative">
