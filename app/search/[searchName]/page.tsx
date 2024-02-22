@@ -17,7 +17,7 @@ export default function Page({ params }: { params: { searchName: string } }) {
   console.log(data);
 
   if (isLoading) return <div>Loading...</div>;
-  if (!data || !Array.isArray(data)) return null;
+  if (!data || !Array.isArray(data.aaData)) return null;
 
   if (data.length === 0) {
     return <Loading />;
@@ -25,7 +25,7 @@ export default function Page({ params }: { params: { searchName: string } }) {
     return (
       <section className="container py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.map((item: any) => (
+          {data.aaData.map((item: any) => (
             <SearchProduct
               key={item.id}
               id={item.id}
@@ -35,7 +35,7 @@ export default function Page({ params }: { params: { searchName: string } }) {
               price={item.price}
             />
           ))}
-          {/* <h1 className="text-3xl py-48">{params.searchName}</h1> */}
+          <h1 className="text-3xl py-48">{params.searchName}</h1>
         </div>
       </section>
     );
