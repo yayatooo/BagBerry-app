@@ -4,6 +4,7 @@ import searchParam from "@/app/service/searchParam";
 import { useQuery } from "react-query";
 import Loading from "@/app/ui/Loading";
 import SearchProduct from "./components/SearchProduct";
+import ProductBanner from "@/app/ui/ProductBanner";
 
 export default function Page({ params }: { params: { searchName: string } }) {
   const { data, isLoading } = useQuery(
@@ -23,21 +24,23 @@ export default function Page({ params }: { params: { searchName: string } }) {
     return <Loading />;
   } else {
     return (
-      <section className="container py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.aaData.map((item: any) => (
-            <SearchProduct
-              key={item.id}
-              id={item.id}
-              name={item.name}
-              photo={item.photo}
-              currency={item.currency}
-              price={item.price}
-            />
-          ))}
-          <h1 className="text-3xl py-48">{params.searchName}</h1>
-        </div>
-      </section>
+      <>
+        <ProductBanner />
+        <section className="container py-16">
+          <div className="flex flex-wrap gap-8">
+            {data.aaData.map((item: any) => (
+              <SearchProduct
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                photo={item.photo}
+                currency={item.currency}
+                price={item.price}
+              />
+            ))}
+          </div>
+        </section>
+      </>
     );
   }
 }
